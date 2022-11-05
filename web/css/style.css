@@ -1,0 +1,408 @@
+:root {
+	--my-bg: #f4f4f4;
+	--my-blue: #4f70f6;
+	--my-orange: #ee9470;
+	--nips-red: #80261b;
+	--nips-bg: #fffdfa;
+	--nips-blue: #597f91;
+	--nips-blue2: #496876;
+	--nips-bg2: #eeece4;
+	--nips-bg-menu: #f0f0ed;
+	--nips-bg-menu-hover: rgba(244, 196, 178, 0.53);
+	--nips-font-black: #2f3a49;
+	--nips-gray-line: #dddddd;
+}
+
+body {
+	background-color: white;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+	width: 100%;
+	margin: 0;
+	color: var(--nips-font-black);
+	margin-bottom: 30px;
+}
+
+table:is(.main-table) {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: auto;
+	width: 90%;
+	/*margin-left: 5%;*/
+	color: var(--nips-font-black);
+	table-layout: fixed;
+}
+
+thead:after {
+	content: "";
+	display: block;
+	height: 8px;
+	width: 100%;
+	background: white;
+}
+
+thead tr:first-child th:last-child {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+thead tr:first-child th:first-child {
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+td {
+	border: 1px solid #d7d7d7;
+	overflow: hidden;
+}
+
+th {
+	height: 36px;
+	background-color: #dedede;
+	text-align: center;
+	border: 1px solid #ebebeb;
+	border-bottom: none;
+	border-top: none;
+}
+
+th:last-child {
+	border-right: none;
+	border-top: none;
+}
+
+th:first-child {
+	border-left: none;
+	border-top: none;
+}
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 10px;
+	margin-right: 6px;
+	/*margin-left: 4px;*/
+	border-width: 0 6px 6px;
+	border-style: solid;
+	border-color: var(--my-blue) transparent;
+	/*visibility: hidden;*/
+	opacity: .2;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=descending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 6px 6px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: .8;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}
+
+.header {
+	width: 100%;
+	/*background-color: var(--nips-red);*/
+	/*color: white;*/
+	height: 50px;
+	line-height: 50px;
+	font-size: 26px;
+	text-align: center;
+	margin: 16px 0 8px 0;
+}
+
+.note {
+	background-color: rgba(240, 240, 240, 0.47);
+	border-radius: 6px;
+	/*padding: 1px 0;*/
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 16px;
+	display: inline-table;
+	/*height: 60px;*/
+}
+
+.note li {
+	list-style: none;
+	line-height: 150%;
+}
+
+.note li::before {
+	content: "\1F449";
+	color: var(--nips-font-black);
+	font-weight: bolder;
+	width: 20px;
+	margin-left: -20px;
+	margin-right: 6px;
+}
+
+.note hr {
+	width: 100%;
+	margin-left: -20px;
+	border-color: rgba(239, 239, 239, 0.47);
+}
+
+.note h3 {
+	margin-left: -20px;
+}
+
+.note span:not(.bg) {
+	color: var(--my-orange);
+}
+
+.note span:is(.bg) {
+	background-color: rgba(213, 213, 213, 0.53);
+	padding: 0 4px;
+	border-radius: 4px;
+}
+
+th:is(.th-rank) {
+	width: 55px;
+}
+
+th:is(.th-rat) {
+	width: 80px;
+}
+
+th:is(.th-title) {
+	width: 500px;
+}
+
+th:is(.th-rats) {
+	width: 135px;
+}
+
+th:is(.th-var) {
+	width: 100px;
+}
+
+th:is(.th-d) {
+	width: 90px;
+}
+
+td:not(.td-left) {
+	text-align: center;
+}
+
+td:is(.td-left) {
+	padding-left: 4px;
+}
+
+td:is(.total) {
+	background-color: #dedede;
+}
+
+td:is(.oral) {
+	background-color: #fb7b8f;
+}
+
+td:is(.spotlight) {
+	background-color: rgba(251, 123, 143, 0.6);
+}
+
+td:is(.poster) {
+	background-color: rgba(251, 123, 143, 0.19);
+}
+
+.note img {
+	cursor: pointer;
+}
+
+td span {
+	font-size: 14px;
+	color: rgba(79, 112, 246, 0.73);
+}
+
+tbody tr {
+	height: 46px;
+}
+
+.note tr {
+	height: 36px;
+}
+
+.note table {
+	width: 600px;
+	margin-left: 18px;
+}
+
+tr:hover {
+	background-color: #e5e5e5;
+}
+
+table:is(.sub-table) {
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: 0;
+	width: 100%;
+}
+
+table:is(.sub-table) {
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: 0;
+	width: 100%;
+}
+
+table:is(.sub-table) tr {
+	height: 0;
+}
+
+table:is(.sub-table) td {
+	border: none;
+}
+
+table:is(.sub-table) td:is(.r1) {
+	/*background-color: rgba(255, 158, 120, 0.19);*/
+	padding-left: 16px;
+	text-align: left;
+	border-bottom: 1px solid rgba(215, 215, 215, 0.5);
+}
+
+table:is(.sub-table) td:is(.r2) {
+	/*background-color: rgba(252, 128, 77, 0.4);*/
+	padding-left: 16px;
+	text-align: left;
+}
+
+a {
+	color: var(--my-blue);
+	text-decoration: none;
+}
+
+a:visited,
+a:active {
+	color: var(--my-blue);
+}
+
+a:hover {
+	color: #2249d9;
+	text-decoration: underline;
+}
+
+.sub-menu a {
+	color: var(--nips-font-black);
+}
+
+.menu {
+	width: 90%;
+	height: 50px;
+	margin-left: 5%;
+	margin-bottom: 20px;
+	display: flex;
+	border-bottom: 1px solid var(--nips-gray-line);
+}
+
+.sub-menu {
+	height: 49px;
+	line-height: 49px;
+	font-size: 20px;
+	/*font-weight: bold;*/
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0 10px;
+	background-color: var(--nips-bg-menu);
+	border-top: 1px solid var(--nips-gray-line);
+	border-left: 1px solid var(--nips-gray-line);
+	border-right: 1px solid var(--nips-gray-line);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	cursor: pointer;
+}
+
+.sub-menu:is(.act) {
+	border-bottom: 1px solid white;
+	cursor: default;
+	background-color: white;
+}
+
+.sub-menu:not(.act):hover {
+	cursor: pointer;
+	background-color: var(--nips-bg-menu-hover);
+}
+
+/* source from https://codepo8.github.io/css-fork-on-github-ribbon/*/
+#forkongithub a{
+	background: #e0e0e0;
+	color: var(--nips-font-black);
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 40px;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	position: relative;
+	transition: 0.2s;
+}
+
+#forkongithub a:hover{
+	background: var(--nips-bg-menu-hover);
+}
+
+@media screen and (min-width:800px){
+	#forkongithub{
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		width: 200px;
+		overflow: hidden;
+		height: 200px;
+		z-index: 9999;
+	}
+	#forkongithub a{
+		width: 170px;
+		position: absolute;
+		top: 40px;
+		right: -60px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+	}
+}
+
+a img:hover {
+	overflow: hidden;
+	transform: translateX(175px) scale(1.5);
+	background-color: #f8f8f8;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+	border-radius: 4px;
+}
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: rgba(79, 112, 246, 0.63); /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+	background-color: var(--my-blue); /* Add a dark-grey background on hover */
+	cursor: pointer;
+}
+
+.r1 {
+	color: rgba(47, 58, 73, 0.61);
+}
