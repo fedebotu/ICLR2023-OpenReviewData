@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>ICLR2022 Statistics</title>
+    <link rel="preload" href='web/css/noto_sans.min.css' as='style'>
+    <link rel="preload" href="web/js/tablesort.min.js" as='script'>
+    <link rel="preload" href="web/js/stats.js" as='script'>
+    <link rel="stylesheet" href="web/css/noto_sans.min.css">
+    <link rel="stylesheet" href="web/css/style.min.css">
+    <base target="_blank" rev="noopener noreferrer">
+</head>
+<body>
+
+<div class="header">
+    ICLR 2022 Statistics
+</div>
+
+<span id="forkongithub">
+    <a href="https://github.com/weigq/iclr2022_stats">Github
+    </a>
+</span>
+
+<div class="note">
+    <ul>
+        <li>
+            <a href="images/stats_bar_0130.png">Rating distribution</a>.<br>
+            <a href="images/stats_bar_0130.png"><img src="images/stats_bar_0130.png" width="700px"></a>
+        </li>
+        <li>
+            <span class="bg">R1</span>: rating @11/09/2021.
+        </li>
+        <li>
+            <span class="bg">R2</span>: rating @01/30/2022 (after final decision).
+        </li>
+        <li>
+            <span class="bg">ΔR=R2-R1</span>: rating difference.
+        </li>
+        <li>
+            <a href="iclr2022_statistics.html">More statistics info.</a>
+        </li>
+        <li>
+            <a href="https://guoqiangwei.xyz/neurips2021_stats/neurips2021_submissions.html">NeurIPS 2021 statistics.</a>
+        </li>
+        <li>
+            <a href="https://github.com/weigq/openview_quicklook">A browser extension</a> (<a href="https://chrome.google.com/webstore/detail/openreview-quicklook/efoabjckcjahofacmgekfhjadpjlmcap?hl=en&authuser=0"><img src="images/chrome.png" alt="chrome extension" width="18px"></a>/<a href="https://microsoftedge.microsoft.com/addons/detail/openreview-quicklook/filopbleifodbgnhaelacfmddhookhka"><img src="images/edge.png" alt="chrome extension" width="18px"></a>) to get submission info quickly.
+        </li>
+    </ul>
+</div>
+
+<div class="menu">
+    <div class="sub-menu act">
+        <a href="iclr2022_submissions.html">All Accepted</a>
+    </div>
+    <div class="sub-menu">
+        <a href="iclr2022_submissions_oral.html">Oral</a>
+    </div>
+    <div class="sub-menu">
+        <a href="iclr2022_submissions_spotlight.html">Spotlight</a>
+    </div>
+    <div class="sub-menu">
+        <a href="iclr2022_submissions_poster.html">Poster</a>
+    </div>
+    <div class="sub-menu">
+        <a href="iclr2022_submissions_reject.html">Rejected</a>
+    </div>
+    <div class="sub-menu">
+        <a href="iclr2022_statistics.html">Statistics</a>
+    </div>
+</div>
+
+<table id="all-subs" class="main-table">
+    <thead data-sort-method='none'>
+    <tr>
+        <th data-sort-method='none' class="no-sort th-rank">#</th>
+        <th role="columnheader" class="th-title">Title</th>
+        <th role="columnheader" class="th-rat">R1</th>
+        <th role="columnheader" class="th-rat">R2</th>
+        <th role="columnheader" class="th-rat">ΔR</th>
+        <th role="columnheader" class="th-rats">Ratings</th>
+        <th role="columnheader" class="th-d">👍</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--    example -->
+<!--        <tr>-->
+<!--            <td>1</td>-->
+<!--            <td class="td-left"><a href=''>Title</a></td>-->
+<!--            <td>10.0</td>-->
+<!--            <td>10.0</td>-->
+<!--            <td>0.0</td>-->
+<!--            <td data-sort="1">-->
+<!--                <table class="sub-table">-->
+<!--                    <tr><td class="r1">10.0, 10.0</td></tr>-->
+<!--                    <tr><td class="r2">10.0, 10.0</td></tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--            <td>Poster</td>-->
+<!--        </tr>-->
+    <!-- start here -->
+    <!-- end here -->
+    </tbody>
+</table>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src='web/js/tablesort.min.js' defer></script>
+<script src='web/js/stats.js' defer></script>
+
+</body>
+</html>
