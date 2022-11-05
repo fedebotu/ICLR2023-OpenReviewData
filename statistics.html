@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>ICLR 2023 Statistics</title>
+    <link href='web/css/style.css' rel='stylesheet'>
+    <link href='web/css/noto_sans.css' rel='stylesheet'>
+    <!-- <link href='web_src/fontawesome-5.15.4/css/all.min.css' rel='stylesheet'> -->
+</head>
+<body>
+
+<div class="header">
+    ICLR 2023 Statistics
+</div>
+
+<span id="forkongithub">
+    <a href="https://github.com/fedebotu/ICLR2023-OpenReviewData">Fork me on Github</i>
+    </a>
+</span>
+
+<center><img style="margin-left: -60px;" src="images/wordcloud_nice.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+
+
+<div class="menu">
+    <div class="sub-menu">
+        <a href="submissions.html">All Submissions</a>
+    </div>
+    <div class="sub-menu act">
+        <a href="statistics.html">Statistics</a>
+    </div>
+</div>
+
+<div class="note">
+    <ul>
+        <!-- <li style="font-weight: bolder; color: #ee9470">
+            This data is collected from <strong>only finally accepted submissions in main conference.</strong>
+        </li>
+        <li style="font-weight: bolder; color: #ee9470">
+            <strong>Finally rejected and Workshop/Track submissions</strong> are excluded. Not all rejected submissions are available in public.
+        </li> -->
+        <hr>
+
+        <h3>All submissions</h3>
+        <li>
+            <span class="bg">4874</span> submitted papers
+        </li>
+        <!-- <li>
+            <span class="bg">298 (13%)</span> submissions received two set of reviews.
+        </li>
+        <li>
+            <span class="bg">2632 (=2334+298)</span> set of reviews in total.
+        </li> -->
+        <li>
+            <span class="bg">4.94</span> average rating of all <span class="bg">4874</span> ratings.
+        </li>
+
+            
+        <li>
+            Rating distribution:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/stats_barplot_20221105.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+
+        <li>
+            Top Keywords:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/top50_keywords.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+
+        <li>
+            Keywords vs Rating:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/keyword_rating.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+
+        <li>
+            Other wordcloud:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/wordcloud.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+ 
+        <li>
+            Review lengths:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/review_length_hist_20221105.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+                
+        <li>
+            Review lengths vs ratings:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/review_length_by_rating_20221105.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+    
+        <li>
+            Review lengths vs confidence:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/review_length_by_confidence_20221105.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+        
+        <li>
+            Number of pages vs ratings:
+        </li>
+            <center><img style="margin-left: -60px;" src="images/num_pages_vs_ratings_20221105.png" alt="" width="1000" onclick="window.open(this.src)"></center>
+
+        <hr>
+    </ul>
+</div>
+
+
+
+<script src='web_src/tablesort.min.js'></script>
+<script src='web_src/stats.js'></script>
+
+</body>
+</html>
