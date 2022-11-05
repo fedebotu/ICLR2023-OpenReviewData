@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+seaborn
+tables
+wordcloud
+imageio
+tqdm
+requests
+PyPDF2
