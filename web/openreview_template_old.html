@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>ICLR2023 Statistics</title>
+    <link rel="preload" href='web/css/noto_sans.min.css' as='style'>
+    <link rel="preload" href="web/js/tablesort.min.js" as='script'>
+    <link rel="preload" href="web/js/stats.js" as='script'>
+    <link rel="stylesheet" href="web/css/noto_sans.min.css">
+    <link rel="stylesheet" href="web/css/style.min.css">
+    <base target="_blank" rev="noopener noreferrer">
+</head>
+<body>
+
+<div class="header">
+    ICLR 2023 Statistics
+</div>
+
+
+<span id="forkongithub">
+    <a href="https://github.com/fedebotu/ICLR2023-OpenReviewData">Fork me on Github</i>
+    </a>
+</span>
+
+<div class="note">
+    <ul>
+        <!-- <li>
+            <a href="images/stats_barplot_20221105.png">Wordcloud</a><br>
+            <center><a href="images/wordcloud_nice.png"><img src="images/wordcloud_nice.png" width="700px" class="center"></a></center>
+        </li> -->
+        <li>
+            
+            <a href="images/stats_barplot_20221105.png">Rating distribution</a><br>
+            <center><a href="images/stats_barplot_20221105.png"><img src="images/stats_barplot_20221105.png" width="700px", class="center"></a></center>
+        </li>
+        <!-- <li>
+            <span class="bg">R1</span>: rating @11/09/2021.
+        </li>
+        <li>
+            <span class="bg">R2</span>: rating @01/30/2022 (after final decision).
+        </li>
+        <li>
+            <span class="bg">ΔR=R2-R1</span>: rating difference.
+        </li> -->
+        <li>
+            <a href="statistics.html">More statistics info</a>
+        </li>
+        <li>
+            <a href="https://github.com/weigq/openview_quicklook">A browser extension</a> (<a href="https://chrome.google.com/webstore/detail/openreview-quicklook/efoabjckcjahofacmgekfhjadpjlmcap?hl=en&authuser=0"><img src="assets/chrome.png" alt="chrome extension" width="18px"></a>/<a href="https://microsoftedge.microsoft.com/addons/detail/openreview-quicklook/filopbleifodbgnhaelacfmddhookhka"><img src="assets/edge.png" alt="chrome extension" width="18px"></a>) to get submission info quickly
+        </li>
+    </ul>
+</div>
+
+<div class="menu">
+    <div class="sub-menu act">
+        <a href="submissions.html">All Submissions</a>
+    </div>
+    <div class="sub-menu">
+        <a href="statistics.html">Statistics</a>
+    </div>
+</div>
+
+<table id="all-subs" class="main-table">
+    <thead data-sort-method='none'>
+    <tr>
+        <th data-sort-method='none' class="no-sort th-rank">#</th>
+        <th role="columnheader" class="th-title">Title</th>
+        <th data-sort-default role="columnheader" class="th-rat">Rating (avg)</th>
+        <th role="columnheader" class="th-rats">Ratings</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--    example -->
+<!--        <tr>-->
+<!--            <td>1</td>-->
+<!--            <td class="td-left"><a href=''>Title</a></td>-->
+<!--            <td>10.0</td>-->
+<!--            <td>10.0</td>-->
+<!--            <td>0.0</td>-->
+<!--            <td data-sort="1">-->
+<!--                <table class="sub-table">-->
+<!--                    <tr><td class="r1">10.0, 10.0</td></tr>-->
+<!--                    <tr><td class="r2">10.0, 10.0</td></tr>-->
+<!--                </table>-->
+<!--            </td>-->
+<!--            <td>Poster</td>-->
+<!--        </tr>-->
+    <!-- start here -->
+    <!-- end here -->
+    </tbody>
+</table>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script src='web/js/tablesort.min.js' defer></script>
+<script src='web/js/stats.js' defer></script>
+
+</body>
+</html>
