@@ -35,7 +35,7 @@ And run the notebooks under the `notebooks/`  folder:
 - Average rating: `4.94`
 
 
-### Rating distribution
+### Rating Distribution
 <p align="center">
     <img src="images/stats_barplot_20221105.png" width="720"/>
 </p> 
@@ -55,7 +55,7 @@ And run the notebooks under the `notebooks/`  folder:
     <img src="images/wordcloud.png" width="720"/>
 </p> 
 
-### Review Lenghts
+### Review Lengths
 <p align="center">
     <img src="images/review_length_hist_20221105.png" width="720"/>
 </p> 
@@ -72,7 +72,7 @@ And run the notebooks under the `notebooks/`  folder:
     <img src="images/review_length_by_confidence_20221105.png" width="720"/>
 </p> 
 
-### Paper lenght (pages) vs Rating
+### Paper Length (pages) vs Rating
 <p align="center">
     <img src="images/num_pages_vs_ratings_20221105.png" width="720"/>
 </p> 
