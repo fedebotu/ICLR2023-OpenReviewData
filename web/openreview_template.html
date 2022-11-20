@@ -9,82 +9,10 @@
     <link rel="stylesheet" href="web/css/jquery.dataTables.min.css"></style>
     <script type="text/javascript" src="web/js/jquery.dataTables.min.js"></script>
     <link rel="preload" href='web/css/noto_sans.min.css' as='style'>
-    <!-- <link rel="preload" href="web/js/tablesort.min.js" as='script'> -->
-    <!-- <link rel="preload" href="web/js/stats.js" as='script'> -->
-    <!-- <link rel="stylesheet" href="web/css/noto_sans.min.css"> -->
     <link rel="stylesheet" href="web/css/style.min.css">
-
-    <style>
-        /* these styles describe the rating colors */
-
-        span.one {
-        font-size: inherit;
-        background-color: #E62E30;
-        color: #000000;
-        opacity: 0.7;
-        border-radius: 10px;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 2px 10px 2px 10px;
-        }
-
-        span.three {
-        font-size: inherit;
-        background-color: #F18032;
-        color: #000000;
-        opacity: 0.7;
-        border-radius: 10px;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 2px 10px 2px 10px;
-        }
-
-        span.five {
-        font-size: inherit;
-        background-color: #FFD334;
-        color: #000000;
-        opacity: 0.7;
-        border-radius: 10px;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 2px 10px 2px 10px;
-        }
-
-        span.six {
-        font-size: inherit;
-        background-color: #81BF2B;
-        color: #000000;
-        opacity: 0.7;
-        border-radius: 10px;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 2px 10px 2px 10px;
-        }
-
-        span.eight {
-        font-size: inherit;
-        background-color: #01AD23;
-        color: #000000;
-        opacity: 0.7;
-        border-radius: 10px;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 2px 10px 2px 10px;
-        }
-
-        span.ten {
-        font-size: inherit;
-        background-color: #01A7E5;
-        color: #000000;
-        opacity: 0.7;
-        border-radius: 10px;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 2px 10px 2px 10px;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="web/css/style.css">
+    <link rel="stylesheet" href="web/css/datatable.css">
+    <script type="text/javascript" src="web/js/openreview.js"></script>
     <base target="_blank" rev="noopener noreferrer">
 </head>  
 
@@ -105,20 +33,23 @@
             <a href="images/stats_barplot_20221105.png">Wordcloud</a><br>
             <center><a href="images/wordcloud_nice.png"><img src="images/wordcloud_nice.png" width="700px" class="center"></a></center>
         </li> -->
+
         <li>
             
-            <a href="images/stats_barplot_20221105.png">Rating distribution</a><br>
-            <center><a href="images/stats_barplot_20221105.png"><img src="images/stats_barplot_20221105.png" width="700px", class="center"></a></center>
-        </li>
-        <!-- <li>
-            <span class="bg">R1</span>: rating @11/09/2021.
+            <a href="images/20221120/stats_barplot.png">Rating distribution</a><br>
+            <center><a href="images/20221120/stats_barplot.png"><img src="images/20221120/stats_barplot.png" width="700px", class="center"></a></center>
         </li>
         <li>
-            <span class="bg">R2</span>: rating @01/30/2022 (after final decision).
+            <span class="bg">R1</span>: rating @2022-11-05.
+        </li>
+        <li>
+            <span class="bg">R2</span>: rating @2022-11-20 (after paper update end).
         </li>
         <li>
             <span class="bg">ΔR=R2-R1</span>: rating difference.
-        </li> -->
+        </li>
+        <li>
+            You may hover on the ratings to see previous ones.
         <li>
             <a href="statistics.html">More statistics info</a>
         </li>
@@ -137,7 +68,6 @@
     </div>
 </div>
 
-
 <div id="hideloadDiv"style="display:none;" >
 
 <table id="myTable" class="table table-striped table-bordered table-responsive table-hover" >  
@@ -154,7 +84,9 @@
             <tr>
                 <th data-sort-method='none' >#</th>
                 <th role="columnheader" >Title</th>
-                <th data-sort-default role="columnheader" >Rating(avg)</th>
+                <th data-sort-default role="columnheader" >R1</th>
+                <th data-sort-default role="columnheader" >R2</th>
+                <th data-sort-default role="columnheader" >∆R</th>
                 <th role="columnheader" >Ratings</th>
             </tr>
         </thead>
@@ -189,7 +121,7 @@
     // https://datatables.net/forums/discussion/62680/looking-for-code-example-to-speed-up-load-of-large-tables
     $(document).ready( function () {
           var table = $('#myTable').DataTable({
-            order: [[2, 'desc']],
+            order: [[3, 'desc']],
             "iDisplayLength": 25,
             initComplete: function () {
               var api = this.api();
@@ -198,5 +130,28 @@
             }
           });
         } );
+ 
+        // apply in parallel color
+        var tds = document.getElementsByTagName("td");
+        var tdsArray = Array.prototype.slice.call(tds);
+        tdsArray.forEach(function (td) {
+            if (td.className == "rtot") {
+                td.innerHTML = getRatingColor(td.innerHTML);
+            }
+            if (td.className == "rdiff") {
+                td.innerHTML = getRatingDiffColor(td.innerHTML);
+            }
+        });
+
+        // apply in parallel id to href
+        var anchors = document.getElementsByTagName("a");
+        var anchorsArray = Array.prototype.slice.call(anchors);
+        anchorsArray.forEach(function (anchor) {
+            if (anchor.id != "") {
+                anchor.href = "https://openreview.net/forum?id=" + anchor.id;
+            }
+        });
+        
+
     </script>
-    </html>  
+</html>  
