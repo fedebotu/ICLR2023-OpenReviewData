@@ -1,0 +1,176 @@
+:root {
+    --theadColor: #cfcafa;
+    --theadTextColor: #000;  
+    --darkColor:#09011a;
+  }
+  
+  body {
+          font-family: "Open Sans", sans-serif;
+
+        }
+  
+        table.dataTable {
+  
+         border:1px solid #000;
+  
+        }
+  
+        thead {
+  
+          background-color: var(--theadColor);
+  
+          
+  
+        }
+  
+        thead > tr,
+  
+        thead > tr > th {
+  
+          background-color: transparent;
+  
+          color: var(--theadTextColor) !important;
+  
+          font-weight: normal;
+  
+          text-align: start;
+  
+        }
+  
+        table.dataTable thead th,
+  
+        table.dataTable thead td {
+  
+          border-bottom: 0px solid #111 !important;
+  
+        }
+  
+        .dataTables_wrapper > div {
+  
+          margin: 5px;
+  
+        }
+  
+        table.dataTable.display tbody tr.even > .sorting_1,
+  
+        table.dataTable.order-column.stripe tbody tr.even> .sorting_1 table.dataTable.display
+  
+          tbody
+  
+          tr.even,
+  
+        table.dataTable.display tbody tr.odd > .sorting_1,
+  
+        table.dataTable.order-column.stripe tbody tr.odd > .sorting_1,
+  
+        table.dataTable.display tbody tr.odd {
+  
+          background-color: #ffffff;
+  
+        }
+  
+        table.dataTable thead th {
+  
+          position: relative;
+  
+          background-image: none !important;
+  
+        }
+  
+        table.dataTable thead th.sorting:after,
+  
+        table.dataTable thead th.sorting_asc:after,
+  
+        table.dataTable thead th.sorting_desc:after {
+  
+          position: absolute;
+  
+          top: 12px;
+  
+          right: 8px;
+  
+          display: block;
+  
+          font-family: "Font Awesome\ 5 Free";
+  
+        }
+  
+        table.dataTable thead th.sorting:after {
+  
+          content: "\f0dc";
+  
+          color: #ddd;
+  
+          font-size: 0.8em;
+  
+          padding-top: 0.12em;
+  
+        }
+  
+        table.dataTable thead th.sorting_asc:after {
+  
+          content: "\f0de";
+  
+        }
+  
+        table.dataTable thead th.sorting_desc:after {
+  
+          content: "\f0dd";
+  
+        }
+  
+        table.dataTable.display tbody tr:hover > .sorting_1,
+  
+        table.dataTable.order-column.hover tbody tr:hover > .sorting_1,
+  
+        tbody tr:hover {
+  
+          background-color: var(--darkColor) !important;
+  
+          /* color: #fff; */
+  
+        }
+  
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+  
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  
+               background: none !important;
+  
+               border-radius: 50px;
+  
+           background-color: var(--theadColor) !important;
+  
+           color:#000 !important
+  
+        }
+  
+  .paginate_button.current:hover
+  
+  {
+  
+          background: none !important;
+  
+               border-radius: 50px;
+  
+               background-color: var(--theadColor) !important;
+  
+           /* color:#fff !important */
+  
+  }
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  
+    border: 1px solid #979797;
+  
+    background: none !important;
+  
+    border-radius: 50px !important;
+  
+     background-color: #000 !important;
+  
+     color: #fff !important;
+  
+  }

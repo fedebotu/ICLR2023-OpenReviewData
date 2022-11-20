@@ -268,12 +268,15 @@ table:is(.sub-table) td:is(.r1) {
 	padding-left: 16px;
 	text-align: left;
 	border-bottom: 1px solid rgba(215, 215, 215, 0.5);
+	/* make smaller */
+	/* font-size: 12px; */
 }
 
 table:is(.sub-table) td:is(.r2) {
 	/*background-color: rgba(252, 128, 77, 0.4);*/
 	padding-left: 16px;
 	text-align: left;
+	/* font-size: 12px; */
 }
 
 a {
@@ -405,4 +408,135 @@ a img:hover {
 
 .r1 {
 	color: rgba(47, 58, 73, 0.61);
+}
+
+
+span.one {
+	font-size: inherit;
+	background-color: #E62E30;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+span.three {
+	font-size: inherit;
+	background-color: #F18032;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+span.five {
+	font-size: inherit;
+	background-color: #FFD334;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+span.six {
+	font-size: inherit;
+	background-color: #81BF2B;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+span.eight {
+	font-size: inherit;
+	background-color: #01AD23;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+span.ten {
+	font-size: inherit;
+	background-color: #01A7E5;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+
+span.increase {
+	font-size: inherit;
+	background-color: #81BF2B;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+
+span.same {
+	font-size: inherit;
+	background-color: #999999;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+
+span.decrease {
+	font-size: inherit;
+	background-color: #F18032;
+	color: #000000;
+	opacity: 0.7;
+	border-radius: 10px;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 2px 10px 2px 10px;
+}
+
+.hovertext {
+	position: relative;
+	border-bottom: 1px dotted black;
+  }
+
+.hovertext:before {
+	content: attr(data-hover);
+	visibility: hidden;
+	opacity: 0;
+	width: max-content;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px 5px;
+	transition: opacity 1s ease-in-out;
+  
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 110%;
+  }
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
 }
