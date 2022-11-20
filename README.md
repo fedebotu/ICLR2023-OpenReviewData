@@ -37,7 +37,7 @@ And run the notebooks under the `notebooks/`  folder:
 
 ### Rating Distribution
 <p align="center">
-    <img src="images/stats_barplot_20221105.png" width="720"/>
+    <img src="images/20221120/stats_barplot.png" width="720"/>
 </p> 
 
 ### Top 50 Keywords
@@ -47,7 +47,7 @@ And run the notebooks under the `notebooks/`  folder:
 
 ### Keywords vs Ratings
 <p align="center">
-    <img src="images/keyword_rating.png" width="720"/>
+    <img src="images/20221120/keyword_rating.png" width="720"/>
 </p> 
 
 ### Wordcloud
@@ -57,24 +57,24 @@ And run the notebooks under the `notebooks/`  folder:
 
 ### Review Lengths
 <p align="center">
-    <img src="images/review_length_hist_20221105.png" width="720"/>
+    <img src="images/20221120/review_length_hist.png" width="720"/>
 </p> 
 
 
 ### Review Lengths by Rating
 <p align="center">
-    <img src="images/review_length_by_rating_20221105.png" width="720"/>
+    <img src="images/20221120/review_length_by_rating.png" width="720"/>
 </p> 
 
 
 ### Review Lengths by Confidence
 <p align="center">
-    <img src="images/review_length_by_confidence_20221105.png" width="720"/>
+    <img src="images/20221120/review_length_by_confidence.png" width="720"/>
 </p> 
 
 ### Paper Length (pages) vs Rating
 <p align="center">
-    <img src="images/num_pages_vs_ratings_20221105.png" width="720"/>
+    <img src="images/20221120/num_pages_vs_ratings.png" width="720"/>
 </p> 
 
 ## Feedback
